@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hour Finder</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="floating-header">
+        <div class="floating-header-left">
+            <span class="floating-header-logo">🍹</span>
+            <span class="floating-header-text">Happy Hour Finder</span>
+        </div>
+        <button class="floating-add-btn" onclick="openContactModal()">Add Your Restaurant</button>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 id="dynamicHeader"><span id="currentDay"></span>'s Happy Hour Deals</h1>
+            <p>Discover the best food and drink specials in your neighborhood</p>
+            
+            <div class="happening-now" id="happeningNow">
+                <span class="happening-text">🔥 Happening Now!</span>
+            </div>
+            
+            <div class="day-filter">
+                <button class="day-btn" data-day="all">All Days</button>
+                <button class="day-btn" data-day="monday">Monday</button>
+                <button class="day-btn" data-day="tuesday">Tuesday</button>
+                <button class="day-btn" data-day="wednesday">Wednesday</button>
+                <button class="day-btn" data-day="thursday">Thursday</button>
+                <button class="day-btn" data-day="friday">Friday</button>
+                <button class="day-btn" data-day="saturday">Saturday</button>
+                <button class="day-btn" data-day="sunday">Sunday</button>
+            </div>
+            
+            <input type="text" class="search-bar" placeholder="Search restaurants or deals..." id="searchBar">
+        </header>
+
+        <section class="trending">
+            <h2>🔥 Trending This Week</h2>
+            <div id="trendingList">
+                <!-- Trending items will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="restaurants" id="restaurantGrid">
+            <!-- Restaurant cards will be populated by JavaScript -->
+        </section>
+
+        <section class="contact-section">
+            <h2>Own a Restaurant?</h2>
+            <p>Get your happy hour specials featured on our site and reach more hungry customers!</p>
+            <button class="contact-btn" onclick="openContactModal()">Contact Us to Get Listed</button>
+        </section>
+    </div>
+
+    <button class="admin-btn" onclick="adminLogin()">⚙️</button>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Add Your Restaurant to Happy Hour Finder</h2>
+            <div id="successMessage" class="success-message">
+                Thank you! Your information has been submitted. We'll contact you within 24 hours to get your restaurant listed.
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="restaurantName">Restaurant Name *</label>
+                    <input type="text" id="restaurantName" name="restaurantName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ownerName">Owner/Manager Name *</label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Restaurant Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cuisine">Cuisine Type</label>
+                    <select id="cuisine" name="cuisine">
+                        <option value="">Select cuisine type...</option>
+                        <option value="american">American</option>
+                        <option value="italian">Italian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="asian">Asian</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="bar-grill">Bar & Grill</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="happyHourInfo">Happy Hour Information</label>
+                    <textarea id="happyHourInfo" name="happyHourInfo" placeholder="Tell us about your current happy hour specials, days/times, and any special deals you'd like to feature..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Website (optional)</label>
+                    <input type="url" id="website" name="website">
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Anything else you'd like us to know about your restaurant?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
