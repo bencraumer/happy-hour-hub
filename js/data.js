@@ -102,6 +102,78 @@ const restaurantsData = [
                 likes: 63
             }
         ]
+    },
+        {
+        id: 'holyhound-taproom',
+        name: 'Holy Hound Taproom',
+        description: 'Hallowed Be Thy Beer • 57 W Market St',
+        logo: 'HH',
+        socialLinks: [
+            { name: 'Facebook', url: 'https://www.facebook.com/HolyHoundTaproom/' },
+            { name: 'Instagram', url: 'https://www.instagram.com/holyhoundtaproom' }
+        ],
+        specials: [
+            {
+                day: 'monday',
+                title: '1/2 Price Wings',
+                description: 'Lorum Ipsum',
+                likes: 52
+            },
+             {
+                day: 'tuesday',
+                title: '1/2 Price Burgers',
+                description: 'Nope',
+                likes: 78
+            },
+             {
+                day: 'wednesday',
+                title: '1/2 Price Tacos - Trivia at 7pm',
+                description: 'test',
+                likes: 78
+            },
+             {
+                day: 'friday',
+                title: 'Pings in zen',
+                description: 'what is this?!',
+                likes: 78
+            },
+            {
+                day: 'sunday',
+                title: '1/2 Price Ramen bowls',
+                description: 'Yummy Ramen',
+                likes: 63
+            },
+            {
+                day: 'sunday',
+                title: '1/2 Price Drafts 4-6PM',
+                description: '30+ Drafts',
+                likes: 63
+            }
+        ]
+    },
+    {
+        id: 'white-rose-grill',
+        name: 'White Rose Bar & Grill',
+        description: 'York/s Finest • 48 N Beaver St',
+        logo: 'SG',
+        socialLinks: [
+            { name: 'Facebook', url: 'https://www.facebook.com/whiterosebarandgrill' },
+            { name: 'Instagram', url: 'https://www.instagram.com/whiterosebarandgrill/' },
+        ],
+        specials: [
+            {
+                day: 'monday','tuesday','wednesday','thursday','friday',
+                title: 'Half Price Happy Hour 3-5pm',
+                description: 'Everything 1/2 Off',
+                likes: 74
+            },
+            {
+                day: 'monday',
+                title: 'Steak Night',
+                description: '$10 New York Strips w/ 1 side',
+                likes: 63
+            }
+        ]
     }
 ];
 
