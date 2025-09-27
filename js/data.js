@@ -213,16 +213,26 @@ const dataUtils = {
     },
 
     /**
-     * Get restaurants that have specials for a specific day
+     * Get restaurants that have specials for a specific day,
+     * and only return specials that equal dayKey
      */
     getRestaurantsByDay: (dayKey) => {
         if (dayKey === 'all') {
             return restaurantsData;
         }
-        
-        return restaurantsData.filter(restaurant => 
-            restaurant.specials.some(special => special.day === dayKey)
-        );
+
+        return restaurantsData
+            .map(restaurant => {
+                const specialsForDay = restaurant.specials.filter(special => special.day === dayKey);
+                if (specialsForDay.length > 0) {
+                    return {
+                        ...restaurant,
+                        specials: specialsForDay
+                    };
+                }
+                return null;
+            })
+            .filter(r => r !== null);
     },
 
     /**
