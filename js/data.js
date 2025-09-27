@@ -107,7 +107,7 @@ const restaurantsData = [
         id: 'holyhound-taproom',
         name: 'Holy Hound Taproom',
         description: 'Hallowed Be Thy Beer • 57 W Market St',
-        logo: 'images/Holy-Hound.jpg',
+        logo: images/Holy-Hound.jpg,
         socialLinks: [
             { name: 'Facebook', url: 'https://www.facebook.com/HolyHoundTaproom/' },
             { name: 'Instagram', url: 'https://www.instagram.com/holyhoundtaproom' }
