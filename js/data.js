@@ -119,19 +119,19 @@ const restaurantsData = [
                 description: 'Lorum Ipsum',
                 likes: 52
             },
-             {
+            {
                 day: 'tuesday',
                 title: '1/2 Price Burgers',
                 description: 'Nope',
                 likes: 78
             },
-             {
+            {
                 day: 'wednesday',
                 title: '1/2 Price Tacos - Trivia at 7pm',
                 description: 'test',
                 likes: 78
             },
-             {
+            {
                 day: 'friday',
                 title: 'Pings in zen',
                 description: 'what is this?!',
