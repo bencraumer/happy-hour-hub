@@ -162,7 +162,7 @@ const restaurantsData = [
         ],
         specials: [
             {
-                day: 'monday','tuesday','wednesday','thursday','friday',
+                day: 'monday',
                 title: 'Half Price Happy Hour 3-5pm',
                 description: 'Everything 1/2 Off',
                 likes: 74
@@ -174,7 +174,8 @@ const restaurantsData = [
                 likes: 63
             }
         ]
-];
+    }
+]
 
 // Trending deals data
 const trendingData = [
