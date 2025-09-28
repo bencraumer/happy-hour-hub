@@ -97,7 +97,16 @@ const UIComponents = {
         return `
             <div class="restaurant-card" data-restaurant="${restaurant.id}">
                 <div class="restaurant-header">
-                    <div class="restaurant-logo">${restaurant.logo}</div>
+                    <div class="restaurant-logo">
+                        ${restaurant.logoImage ? `
+                            <img src="${restaurant.logoImage}" 
+                                alt="${restaurant.name}"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="fallback-text" style="display:none;">${restaurant.logo}</div>
+                        ` : `
+                            <div class="fallback-text">${restaurant.logo}</div>
+                        `}
+                    </div>
                     <div class="restaurant-info">
                         <h3>${restaurant.name}</h3>
                         <p>${restaurant.description}</p>

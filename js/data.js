@@ -106,8 +106,9 @@ const restaurantsData = [
     {
         id: 'holyhound-taproom',
         name: 'Holy Hound Taproom',
-        description: 'Hallowed Be Thy Beer • 57 W Marketttt St',
-        logo: "images/Holy-Hound.jpg",
+        description: 'Hallowed Be Thy Beer • 57 W Market St',
+        logo: 'HH',
+        logoImage: 'images/HolyHound.jpg',
         socialLinks: [
             { name: 'Facebook', url: 'https://www.facebook.com/HolyHoundTaproom/' },
             { name: 'Instagram', url: 'https://www.instagram.com/holyhoundtaproom' }
@@ -154,7 +155,7 @@ const restaurantsData = [
     {
         id: 'white-rose-grill',
         name: 'White Rose Bar & Grill',
-        description: 'York/s Finest • 48 N Beaver St',
+        description: 'York\'s Finest • 48 N Beaver St',
         logo: 'SG',
         socialLinks: [
             { name: 'Facebook', url: 'https://www.facebook.com/whiterosebarandgrill' },
